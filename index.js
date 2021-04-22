@@ -213,6 +213,7 @@ async function initialize() {
                     .setFooter(`Doom selfbot`)
                     .setTimestamp();
 
+
                 const arr = [];
 
                 categoryList.forEach((item) => {

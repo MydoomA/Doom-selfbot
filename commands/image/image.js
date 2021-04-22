@@ -1,5 +1,5 @@
 module.exports = {
-    desc: ";)",
+    desc: "searches an image",
     run: async function(Discord, message, client, quick) {
         message.delete()
 
@@ -7,13 +7,13 @@ module.exports = {
         const command = args.shift()
 
         const {Attachment} = require('discord.js');
-        const PornHub = require('pornhub.js')
+        const Image = require('image-search-google')
 
-        const pornhub = new PornHub()
+        const image = new Image()
 
-        const m = await message.channel.send('Searching...')
+        const image = await message.channel.send('Searching...')
         
-        pornhub.search('Video', args.join(' ')).then(async function (res) {
+        image.search('Video', args.join(' ')).then(async function (res) {
             const random = await res.data[Math.floor(Math.random() * res.data.length)]
 
             const embed = new Discord.RichEmbed()

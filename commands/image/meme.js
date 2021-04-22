@@ -7,13 +7,13 @@ module.exports = {
         const command = args.shift()
 
         const {Attachment} = require('discord.js');
-        const PornHub = require('pornhub.js')
+        const Meme = require('meme-fetch')
 
-        const pornhub = new PornHub()
+        const meme = new Meme()
 
-        const m = await message.channel.send('Searching...')
+        const meme = await message.channel.send('Searching...')
         
-        pornhub.search('Video', args.join(' ')).then(async function (res) {
+        meme.search('Video', args.join(' ')).then(async function (res) {
             const random = await res.data[Math.floor(Math.random() * res.data.length)]
 
             const embed = new Discord.RichEmbed()
