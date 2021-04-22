@@ -1,0 +1,41 @@
+if string.sub(tk, 1, 7) == (cmdpre.."bring ") then
+for i,v in pairs(GetPlayer(string.sub(tk, 8))) do
+game.Workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["Remington 870"].ITEMPICKUP)
+		local mainhand = game.Players.LocalPlayer.Backpack:FindFirstChild("Remington 870").Handle
+		mainhand.Size = Vector3.new(5, 5, 5)
+		local NOW = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+		game.Players.LocalPlayer.Character.Humanoid.Name = 1
+		local l = game.Players.LocalPlayer.Character["1"]:Clone()
+		l.Parent = game.Players.LocalPlayer.Character
+		l.Name = "Humanoid"
+		wait(0.2)
+		game.Players.LocalPlayer.Character["1"]:Destroy()
+		game.Workspace.CurrentCamera.CameraSubject = game.Players.LocalPlayer.Character
+		wait(0.2)
+		game.Players.LocalPlayer.Character.Animate.Disabled = true
+		game.Players.LocalPlayer.Character.Humanoid.DisplayDistanceType = "None"
+		for i,x in pairs(game:GetService'Players'.LocalPlayer.Backpack:GetChildren())do
+		game.Players.LocalPlayer.Character.Humanoid:EquipTool(x)
+		end
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame
+		wait(0.2)
+		for i,x in pairs(game:GetService'Players'.LocalPlayer.Backpack:GetChildren())do
+		game.Players.LocalPlayer.Character.Humanoid:EquipTool(x)
+		end
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame
+		wait(0.2)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = NOW
+		wait(0.01)
+		game.Players.LocalPlayer.Character:MoveTo(v.Character.Position)
+		wait(0.2)
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = NOW
+		wait(0.001)
+saved = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+local A_1 = "\66\114\111\121\111\117\98\97\100\100"
+local Event = game:GetService("Workspace").Remote.loadchar
+Event:InvokeServer(A_1)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = saved
+end
+wait(0.01)
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-936.546631, 94.1287842, 1990.08435)
+end
