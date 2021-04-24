@@ -21,7 +21,7 @@ module.exports = {
             .setColor(quick.getSetting('Color'))
             .setAuthor(user.username,`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`)
             .setThumbnail(`https://cdn.discordapp.com/avatars/${user.id}/${user.avatar}.png`)
-            .setFooter(`Vapin' Cat Selfbot.`)
+            .setFooter(`Doom selfbot`)
             .setTimestamp()
             .addField('Tag',user.username+'#'+user.discriminator, false)
             .addField('User ID',user.id, false)
