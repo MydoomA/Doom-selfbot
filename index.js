@@ -38,7 +38,7 @@ const quick = {
         if (title) {
             embed
                 .setAuthor(title)
-                .setThumbnail('https://cdn.discordapp.com/attachments/821616662917677067/822219803578073169/ezgif.com-resize.gif');
+                .setThumbnail('https://i.ytimg.com/vi/BweV0r7sRGQ/hqdefault.jpg');
             if (avatar) embed.setAuthor(title,avatar)
         }
         if (desc) embed.setDescription(desc)
@@ -49,8 +49,8 @@ const quick = {
     guildprotection: true,
     deletedMessages: [],
     status: {
-        name: 'scorpionadm.in/invite',
-        type: 'STREAMING',
+        name: 'with my feelings for u',
+        type: 'PLAYING',
         url: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
     },
     lastMessage: null,
